@@ -1,0 +1,14 @@
+.DS_Store
+*~
+*.pyc
+*.swp
+.vscode
+.build-scripts
+.cache
+.idea
+.tox
+.eggs
+/venv*
+/virtualenv
+.pytest_cache
+.venv
