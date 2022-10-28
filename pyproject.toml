@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "my-plat"
+version = "0.1.0"
+description = ""
+authors = ["Justin Prosser <jprosser@uw.edu>"]
+readme = "README.md"
+packages = [{include = "my_plat"}]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+flask = "^2.2.2"
+pytest-flask = "^1.2.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2.5"
+pytest-flask = "^1.2.0"
+black = "^22.6.0"
+flake8 = "^5.0.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
