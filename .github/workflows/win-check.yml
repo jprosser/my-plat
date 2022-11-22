@@ -23,7 +23,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-python@v4
-        with: python-version: 3.8
+        with:
+          python-version: 3.8
       - name: Run Windows Python
         run: |
           python -m pip install --upgrade pip
