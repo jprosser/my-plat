@@ -7,7 +7,7 @@ jobs:
     name: Run PSScriptAnalyzer on Windows
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Install PSScriptAnalyzer module
         shell: pwsh
         run: |
@@ -17,14 +17,19 @@ jobs:
         shell: pwsh
         run: |
           Get-ScriptAnalyzerRule
+      - name: Where is msbuild
+        shell: pwsh
+        run: |
+          reg.exe query "HKLM\SOFTWARE\Microsoft\MSBuild\ToolsVersions\4.0" /v MSBuildToolsPath
+  
   Python-on-Windows:
     name: Python tooling on Windows
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-python@v4
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
         with:
-          python-version: 3.8
+          python-version: 3.10
       - name: Run Windows Python
         run: |
           python -m pip install --upgrade pip
